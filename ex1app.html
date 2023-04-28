@@ -1,0 +1,37 @@
+<template>
+	<div class="calculator">
+		<input type="text" class="input" value={inputValue} readonly />
+		<table>
+			<tr>
+				<td><button value="7" onclick={handleInput}>7</button></td>
+				<td><button value="8" onclick={handleInput}>8</button></td>
+				<td><button value="9" onclick={handleInput}>9</button></td>
+				<td><button value="/" onclick={handleOperator}>/</button></td>
+			</tr>
+			<tr>
+				<td><button value="4" onclick={handleInput}>4</button></td>
+				<td><button value="5" onclick={handleInput}>5</button></td>
+				<td><button value="6" onclick={handleInput}>6</button></td>
+				<td><button value="*" onclick={handleOperator}>*</button></td>
+			</tr>
+			<tr>
+				<td><button value="1" onclick={handleInput}>1</button></td>
+				<td><button value="2" onclick={handleInput}>2</button></td>
+				<td><button value="3" onclick={handleInput}>3</button></td>
+				<td><button value="-" onclick={handleOperator}>-</button></td>
+			</tr>
+			<tr>
+				<td><button value="0" onclick={handleInput}>0</button></td>
+				<td><button value="." onclick={handleInput}>.</button></td>
+				<td><button value="clear" onclick={handleClear}>Clear</button></td>
+				<td><button value="+" onclick={handleOperator}>+</button></td>
+			</tr>
+			<tr>
+				<td colspan="4"><button onclick={handleCalculate}>=</button></td>
+			</tr>
+		</table>
+		<div class="output">
+			<p>{outputValue}</p>
+		</div>
+	</div>
+</template>
